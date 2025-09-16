@@ -18,12 +18,13 @@ const Feed = () => {
       dispatch(addFeed(res?.data?.data));
     } catch (err) {
       //TODO: handle error
+      console.log(err);
     }
   };
 
   useEffect(() => {
     getFeed();
-  }, []);
+  });
   if (!feed) return;
 
   if (feed.length <= 0)
